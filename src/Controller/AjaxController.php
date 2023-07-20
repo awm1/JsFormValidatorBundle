@@ -2,7 +2,7 @@
 
 namespace Fp\JsFormValidatorBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
  *
  * @package Fp\JsFormValidatorBundle\Controller
  */
-class AjaxController extends Controller
+class AjaxController extends AbstractController
 {
     /**
      * This is simplified analog for the UniqueEntity validator
@@ -32,7 +32,7 @@ class AjaxController extends Controller
             }
         }
 
-        $entity = $this
+        $entity = $this->container
             ->get('doctrine')
             ->getRepository($data['entityName'])
             ->{$data['repositoryMethod']}($data['data'])

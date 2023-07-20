@@ -88,7 +88,7 @@ class JsFormValidatorFactory
      *
      * @param string $className
      *
-     * @return ClassMetadata
+     * @return \Symfony\Component\Validator\Mapping\MetadataInterface
      * @codeCoverageIgnore
      */
     protected function getMetadataFor($className)
