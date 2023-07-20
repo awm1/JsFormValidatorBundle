@@ -9,3 +9,5 @@ Tests/app/public/bundles
 Tests/app/public/build
 cypress/plugins
 cypress
+
+.idea
